@@ -35,3 +35,6 @@
 */Debug/
 */Release/
 .vs/
+
+# Project Specifics
+UnitTests/
