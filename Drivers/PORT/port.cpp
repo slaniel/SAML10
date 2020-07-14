@@ -2,9 +2,9 @@
 
 using namespace SAML10::Register;
 
-void regPort::enableClock(void){
-	
-}
+//void regPort::enableClock(void){
+	//
+//}
 
 void regPort::setAsOutput(uint32_t pin){
 	//! The peripheral multiplexer is disable, PORT reg controls Dir and Out !//

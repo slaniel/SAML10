@@ -19,7 +19,7 @@ namespace SAML10 {
 				PERIPHERAL_I = 0x08UL
 			};
 	
-			static void enableClock(void);
+			//static void enableClock(void);
 			static void setAsOutput(uint32_t pin);
 			static void setAsInput(uint32_t pin);
 			static void setAsPeripheral(uint32_t pin, enum enum_PERIPHERAL peripheral);
