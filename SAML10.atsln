@@ -3,12 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Atmel Studio Solution File, Format Version 11.00
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "UnitTests", "SAML10\UnitTests.cppproj", "{DCE6C7E3-EE26-4D79-826B-08594B9AD897}"
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "Drivers", "Drivers\Drivers.cppproj", "{BDFB866D-DFC0-4EA9-8689-E42EA4902B89}"
+EndProject
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "Tests", "Tests\Tests.cppproj", "{DCE6C7E3-EE26-4D79-826B-08594B9AD897}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BDFB866D-DFC0-4EA9-8689-E42EA4902B89} = {BDFB866D-DFC0-4EA9-8689-E42EA4902B89}
 	EndProjectSection
-EndProject
-Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "Drivers", "Drivers\Drivers.cppproj", "{BDFB866D-DFC0-4EA9-8689-E42EA4902B89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,14 +16,14 @@ Global
 		Release|ARM = Release|ARM
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Debug|ARM.ActiveCfg = Debug|ARM
-		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Debug|ARM.Build.0 = Debug|ARM
-		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|ARM.ActiveCfg = Release|ARM
-		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|ARM.Build.0 = Release|ARM
 		{BDFB866D-DFC0-4EA9-8689-E42EA4902B89}.Debug|ARM.ActiveCfg = Debug|ARM
 		{BDFB866D-DFC0-4EA9-8689-E42EA4902B89}.Debug|ARM.Build.0 = Debug|ARM
 		{BDFB866D-DFC0-4EA9-8689-E42EA4902B89}.Release|ARM.ActiveCfg = Release|ARM
 		{BDFB866D-DFC0-4EA9-8689-E42EA4902B89}.Release|ARM.Build.0 = Release|ARM
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Debug|ARM.ActiveCfg = Debug|ARM
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Debug|ARM.Build.0 = Debug|ARM
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|ARM.ActiveCfg = Release|ARM
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|ARM.Build.0 = Release|ARM
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
