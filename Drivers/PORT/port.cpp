@@ -1,12 +1,12 @@
 #include "Drivers/PORT/port.h"
 
-using namespace SAML10::Register;
+using namespace Drivers::SAML10;
 
 //void regPort::enableClock(void){
 	//
 //}
 
-void regPort::setAsOutput(uint32_t pin){
+void RegPort::setAsOutput(uint32_t pin){
 	//! The peripheral multiplexer is disable, PORT reg controls Dir and Out !//
 	PORT->Group->PINCFG[pin].bit.PMUXEN = 0;
 	//! The Data direction is output
@@ -19,7 +19,7 @@ void regPort::setAsOutput(uint32_t pin){
 	PORT->Group->PINCFG[pin].bit.INEN = 0;
 }
 
-void regPort::setAsInput(uint32_t pin){
+void RegPort::setAsInput(uint32_t pin){
 	//! The peripheral multiplexer is disable, PORT reg controls Dir and Out
 	PORT->Group->PINCFG[pin].bit.PMUXEN = 0;
 	//! The Data direction is output
@@ -29,7 +29,7 @@ void regPort::setAsInput(uint32_t pin){
 	//! Enable Input buffer by default
 	PORT->Group->PINCFG[pin].bit.INEN = 1;
 }
-void regPort::setAsPeripheral(uint32_t pin, enum regPort::enum_PERIPHERAL peripheral){
+void RegPort::setAsPeripheral(uint32_t pin, enum RegPort::enum_PERIPHERAL peripheral){
 	//! The peripheral multiplexer is enable
 	PORT->Group->PINCFG[pin].bit.PMUXEN = 1;
 	//! Choose peripherals
@@ -40,7 +40,7 @@ void regPort::setAsPeripheral(uint32_t pin, enum regPort::enum_PERIPHERAL periph
 	}
 	
 }
-uint32_t regPort::getLevel(uint32_t pin){
+uint32_t RegPort::getLevel(uint32_t pin){
 	//! If pin is an output
 	if(PORT->Group->DIR.reg & (0x1u << pin)) {
 		//! Read directly from out register
@@ -50,7 +50,7 @@ uint32_t regPort::getLevel(uint32_t pin){
 		return ((PORT->Group->IN.reg & (0x1u << pin)) != 0);
 	}
 }
-void regPort::setLevel(uint32_t pin, uint8_t level){
+void RegPort::setLevel(uint32_t pin, uint8_t level){
 	//! If pin is an output, change value
 	if(PORT->Group->DIR.reg & (0x1u << pin)) {
 		//! Set Logic depending on parameter level
@@ -61,7 +61,7 @@ void regPort::setLevel(uint32_t pin, uint8_t level){
 		}
 	}
 }
-void regPort::toggleLevel(uint32_t pin){
+void RegPort::toggleLevel(uint32_t pin){
 	//! If pin is an output, change value
 	if(PORT->Group->DIR.reg & (0x1u << pin)) {
 		//! Toggle Logic
@@ -69,19 +69,19 @@ void regPort::toggleLevel(uint32_t pin){
 	}
 }
 
-void regPort::setPullUp(uint32_t pin){
+void RegPort::setPullUp(uint32_t pin){
 	//! Enable Pull
 	PORT->Group->PINCFG[pin].bit.PULLEN = 1;
 	//! Set PullDown
 	PORT->Group->OUTSET.reg = (0x1u << pin);
 }
-void regPort::setPullDown(uint32_t pin){
+void RegPort::setPullDown(uint32_t pin){
 	//! Enable Pull
 	PORT->Group->PINCFG[pin].bit.PULLEN = 1;
 	//! Set PullDown
 	PORT->Group->OUTCLR.reg = (0x1u << pin);
 }
-void regPort::disablePull(uint32_t pin){
+void RegPort::disablePull(uint32_t pin){
 	//! Disable Pull
 	PORT->Group->PINCFG[pin].bit.PULLEN = 0;
 }

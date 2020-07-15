@@ -1,11 +1,11 @@
 #include "sam.h"
 
-#ifndef PORT_H_
-#define PORT_H_
+#ifndef DRIVERS_SAML10_REGPORT_H_
+#define DRIVERS_SAML10_REGPORT_H_
 
-namespace SAML10 {
-	namespace Register{
-		class regPort{
+namespace Drivers {
+	namespace SAML10{
+		class RegPort{
 		public:
 			enum enum_PERIPHERAL{
 				PERIPHERAL_A = 0x00UL,
@@ -32,10 +32,10 @@ namespace SAML10 {
 	
 		private:
 			// Prevent creating instance of object
-			regPort(void);
-			~regPort(void);
+			RegPort(void);
+			~RegPort(void);
 		};
 	}
 }
 
-#endif /* PORT_H_ */
+#endif /* DRIVERS_SAML10_REGPORT_H_ */

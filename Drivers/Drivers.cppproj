@@ -184,7 +184,22 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="GCLK\def_gclk.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="GCLK\gclk.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="GCLK\gclk.cpp">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="library.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCLK\mclk.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCLK\mclk.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="PORT\port.cpp">
@@ -196,11 +211,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DSU" />
+    <Folder Include="EIC\" />
     <Folder Include="GCLK" />
     <Folder Include="MCLK" />
     <Folder Include="FREQM" />
     <Folder Include="DMAC" />
-    <Folder Include="EIC" />
     <Folder Include="EVSYS" />
     <Folder Include="I2C" />
     <Folder Include="CCL" />
