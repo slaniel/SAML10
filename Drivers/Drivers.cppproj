@@ -208,6 +208,21 @@
     <Compile Include="PORT\port.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="USART\config_usart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="USART\msg_usart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="USART\usart.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="USART\usart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UUID\uuid.h">
+      <SubType>compile</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DSU" />
@@ -222,6 +237,7 @@
     <Folder Include="ADC" />
     <Folder Include="AC" />
     <Folder Include="DAC" />
+    <Folder Include="UUID" />
     <Folder Include="PTC" />
     <Folder Include="OPAMP" />
     <Folder Include="TRNG" />

@@ -1,10 +1,10 @@
+#ifndef DRIVERS_SAML10_REGGCLK_H_
+#define DRIVERS_SAML10_REGGCLK_H_
+
 #include "sam.h"
 #include "Drivers/GCLK/def_gclk.h"
 #include <stdint-gcc.h>
 #include <stdbool.h>
-
-#ifndef DRIVERS_SAML10_REGGCLK_H_
-#define DRIVERS_SAML10_REGGCLK_H_
 
 namespace Def = Drivers::SAML10::DefRegGclk;
 

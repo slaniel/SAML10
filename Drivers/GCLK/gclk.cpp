@@ -39,9 +39,10 @@ void RegGclk::setPchCtrl(Def::PCHCTRL::Channel _channel, uint32_t _config){
 }
 void RegGclk::setPchCtrl(Def::PCHCTRL::Channel _channel, bool WRTLOCK, bool CHEN, uint8_t GEN){
 	//! Set config of channel bits by bits
-	GCLK->PCHCTRL[_channel].bit.WRTLOCK = WRTLOCK;
-	GCLK->PCHCTRL[_channel].bit.CHEN = CHEN;
-	GCLK->PCHCTRL[_channel].bit.GEN = GEN;
+	volatile int ch = (int)_channel;
+	GCLK->PCHCTRL[ch].bit.WRTLOCK = WRTLOCK;
+	GCLK->PCHCTRL[ch].bit.CHEN = CHEN;
+	GCLK->PCHCTRL[ch].bit.GEN = GEN;
 }
 uint32_t RegGclk::getPchCtrl(Def::PCHCTRL::Channel _channel){
 	return GCLK->PCHCTRL[_channel].reg;
